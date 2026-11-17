@@ -10,14 +10,15 @@ powerbi: Ira criar o dashboard que ira traduzir os resultados encontrados na pre
 
 # Pastas do sistema
 -> Treinamento: Ira conter o arquivo csv que será utilizado no
-treinamento do modelo. 
+treinamento do modelo (deve conter apenas um arquivo csv). O
+arquivo de treinamento deve ter obrigatorimente o nome "train.csv".
 
 -> Dados: Ira conter os arquivos que serão utilizados na predição
 
 -> Logs: Ira conter os arquivos de logs que contém as etapas de 
 cada execução do projeto
 
--> Relatórios: Ira conter os arquivos que serão utilizados na
+-> Relatorios: Ira conter os arquivos que serão utilizados na
 construção do dashboard.
 
 -> Historico: Ira conter todos os arquivos que ja foram utilizados
@@ -75,6 +76,8 @@ de arquivos na pasta)
 no modelo de predição.
 
 -> Ira verificar a extensão do arquivo antes de realizar a predição
+
+-> Ira verificar se há mais de um arquivo csv de treinamento
 
 -> Ira tratar e preparar os dados que serão usados no treinamento 
 do modelo.
