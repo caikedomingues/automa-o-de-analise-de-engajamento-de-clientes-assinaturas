@@ -13,7 +13,9 @@ powerbi: Ira criar o dashboard que ira traduzir os resultados encontrados na pre
 treinamento do modelo (deve conter apenas um arquivo csv). O
 arquivo de treinamento deve ter obrigatorimente o nome "train.csv".
 
--> Dados: Ira conter os arquivos que serão utilizados na predição
+-> Dados: Ira conter o arquivo que será utilizado na predição 
+(também deve conter apenas um arquivo csv). O arquivo de 
+predição deve ter obrigatorimente o nome "test.csv".
 
 -> Logs: Ira conter os arquivos de logs que contém as etapas de 
 cada execução do projeto
@@ -77,9 +79,9 @@ no modelo de predição.
 
 -> Ira verificar a extensão do arquivo antes de realizar a predição
 
--> Ira verificar se há mais de um arquivo csv de treinamento
+-> Ira verificar se há mais de um arquivo csv de treinamento\teste
 
--> Ira tratar e preparar os dados que serão usados no treinamento 
+-> Ira tratar e preparar os dados que serão usados no treinamento\teste 
 do modelo.
 
 -> Ira acessar a pasta que contém os arquivos que serão utilizados
@@ -89,20 +91,28 @@ no modelo de predição para a geração do relatório.
 data e a hora da execução de cada etapa. Cada dia terá o seu arquivo
 log com as execuções da automação.
 
--> Ira gerar um relatório com os dados trataados e classificados para
+-> Ira gerar um relatório com os dados tratados e classificados para
 serem utilizados na construção do dashboard.
 
--> Ira transferir os arquivos para uma pasta que conterá todos os arquivos
-que ja foram tratados e analisados.
+-> Ira transferir os arquivos ja utilizados na predição do modelo
+ para uma pasta que conterá todos os arquivos que ja foram tratados 
+ e analisados.
 
 # Classificações do modelo:
--> Baixo: Possui baixa ou nenhuma probabilidade de cancelar a assinatura.
+-> Baixo:  Probabilidade < 0.3 (Menos de 30% de chance)
 
--> Médio: Ira representar clientes que podem ou não cancelar a assinatura,
-ou seja, clientes "indecisos" e imprevisiveis que podem ir de um pico a
-outro a qualquer momento.
+-> Médio: Probabilidade entre 0.3 e 0.7 (30% a 70%)
 
--> Alto: Possui alta probabilidade de cancelar a assinatura
+-> Alto: obabilidade > 0.7 (Mais de 70% de chance)
+
+# Etapas de Processamentos dos dados na automação Python
+-> Acesso as pastas de dados
+-> Verificar se há arquivos csv diferente do arquivo definido como padrão
+-> Verificar se há arquivos que não são csv
+-> Carregar as bases de dados
+-> verificar a existencia de valores nulos
+-> renomear as colunas das bases
+-> codificar as variáveis categóricas.
 
 # O que o PowerBI faz:
 -> Calcula a taxa de Cancelamento
